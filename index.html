@@ -22,31 +22,24 @@
             <option value="expense">Expense</option>
           </select>
         </div>
-        <!--going to be a input where they can add a discription of what the expense/income was-->
+        <!--going to be a input where they can add a description of what the expense/income was-->
         <div class="row">
           <label for="disc">Description</label>
           <input
             type="text"
             id="disc"
-            placeholder="e.g., is it a paycheck or did you buy grocieries..."
+            placeholder="e.g., is it a paycheck or did you buy groceries..."
           />
         </div>
         <!--input box for the amount of income recieved or expense spent.-->
         <div class="row">
           <label for="amount">Amount ($)</label>
-          <!--using step attribute so I can omit the default of a whole number and allow decimal places to two-->
-          <input
-            type="number"
-            id="amount"
-            step="0.01"
-            placeholder="e.g., 120.99"
-          />
+          <input type="number" id="amount" placeholder="e.g., 120.99" />
         </div>
         <!--then add some buttons for add income/add expense-->
         <div class="buttons">
           <button type="button" id="add-income-btn">Add Income</button>
           <button type="button" id="add-expense-btn">Add Expense</button>
-          <button type="submit" id="add=btn">Add</button>
         </div>
 
         <p id="error" class="error" aria-live="polite"></p>
@@ -76,7 +69,7 @@
 
         <div class="list">
           <h3>Expenses</h3>
-          <ul expense-list></ul>
+          <ul id="expense-list"></ul>
         </div>
       </section>
     </main>

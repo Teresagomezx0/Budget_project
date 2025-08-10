@@ -45,7 +45,7 @@ body {
 .row {
   display: flex;
   flex-direction: column;
-  gap: 6ox;
+  gap: 6px;
 }
 
 .buttons {
@@ -142,4 +142,4 @@ body {
   .lists {
     grid-template-columns: 1fr;
   }
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
