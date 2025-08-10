@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Budget Tracker <3</h1>
+    </header>
+    <!--Creating the 'cards'/text inputs for descriptions-->
+    <main class="card">
+      <form id="income-form">
+        <div class="row">
+          <!--going to make a drop down to indicate what type of income/action is being made-->
+          <label for="type">Type</label>
+          <select name="type" id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </div>
+        <!--going to be a input where they can add a discription of what the expense/income was-->
+        <div class="row">
+          <label for="disc">Description</label>
+          <input
+            type="text"
+            id="disc"
+            placeholder="e.g., is it a paycheck or did you buy grocieries..."
+          />
+        </div>
+        <!--input box for the amount of income recieved or expense spent.-->
+        <div class="row">
+          <label for="amount">Amount ($)</label>
+          <!--using step attribute so I can omit the default of a whole number and allow decimal places to two-->
+          <input
+            type="number"
+            id="amount"
+            step="0.01"
+            placeholder="e.g., 120.99"
+          />
+        </div>
+        <!--then add some buttons for add income/add expense-->
+        <div class="buttons">
+          <button type="button" id="add-income-btn">Add Income</button>
+          <button type="button" id="add-expense-btn">Add Expense</button>
+          <button type="submit" id="add=btn">Add</button>
+        </div>
+
+        <p id="error" class="error" aria-live="polite"></p>
+      </form>
+
+      <!--Add a summary of total income, expenses, and suggested budget-->
+      <section class="summary">
+        <h2>Summary <3</h2>
+        <div class="totals">
+          <div>
+            <span>Income:</span><strong id="income-total">$0.00</strong>
+          </div>
+          <div>
+            <span>Expenses:</span><strong id="expense-total">$0.00</strong>
+          </div>
+          <div>
+            <span>Total Budget:</span><strong id="budget-total">$0.00</strong>
+          </div>
+        </div>
+      </section>
+      <!--incorporate the history-->
+      <section class="lists">
+        <div class="list">
+          <h3>Incomes</h3>
+          <ul id="income-list"></ul>
+        </div>
+
+        <div class="list">
+          <h3>Expenses</h3>
+          <ul expense-list></ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
