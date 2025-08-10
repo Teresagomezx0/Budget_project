@@ -107,10 +107,8 @@ function handleAdd(givenType) {
   const type = givenType || select.value;
   if (type === "income") {
     budget.addIncome(disc, amount);
-    console.log("after addIncome - incomes", budget.incomes);
   } else {
     budget.addExpense(disc, amount);
-    console.log("after addExpenses - expenses", budget.expenses);
   }
 
   updateUI();
